@@ -87,12 +87,31 @@ spec:
     template:
       name: tekton-argocd-example-build-tt
 
+# ---
+
+# apiVersion: getambassador.io/v2
+# kind: Mapping
+# metadata:
+#   name: tekton-argocd-example-build-el-mapping
+# spec:
+#   prefix: /tekton-argocd-example-build-mapping/
+#   service: el-tekton-argocd-example-build-el:8080
+
 ---
 
-apiVersion: getambassador.io/v2
-kind: Mapping
+apiVersion: extensions/v1beta1
+kind: Ingress
 metadata:
-  name: tekton-argocd-example-build-el-mapping
+  name: ingress-resource
+  namespace: getting-started
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
-  prefix: /tekton-argocd-example-build-mapping/
-  service: el-tekton-argocd-example-build-el:8080
+  rules:
+    - http:
+        paths:
+          - path: /
+            backend:
+              serviceName: tekton-argocd-example-build-el
+              servicePort: 8080
