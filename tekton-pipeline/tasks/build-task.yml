@@ -1,3 +1,5 @@
+# Uses Kaniko to build the Dockerfile from the sample app, and publish the image to our Docker registry
+
 ---
 apiVersion: tekton.dev/v1beta1
 kind: Task

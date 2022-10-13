@@ -1,3 +1,5 @@
+# Uses ArgoCD to manage the application deployment
+
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
