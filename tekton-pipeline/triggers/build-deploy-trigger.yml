@@ -113,5 +113,7 @@ spec:
         paths:
           - path: /
             backend:
-              serviceName: tekton-argocd-example-build-el
-              servicePort: 8080
+              service:
+                name: tekton-argocd-example-build-el
+                port:
+                  number: 8080
