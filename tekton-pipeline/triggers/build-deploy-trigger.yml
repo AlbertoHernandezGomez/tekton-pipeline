@@ -114,6 +114,6 @@ spec:
           - path: /
             backend:
               service:
-                name: tekton-argocd-example-build-el
+                name: ingress-nginx-controller
                 port:
                   number: 8080
