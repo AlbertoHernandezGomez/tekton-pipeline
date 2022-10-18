@@ -115,6 +115,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: ingress-nginx-controller
+                name: el-tekton-argocd-example-build-el
                 port:
                   number: 8080
