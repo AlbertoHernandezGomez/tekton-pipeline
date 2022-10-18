@@ -111,7 +111,8 @@ spec:
   rules:
     - http:
         paths:
-          - path: /
+          - path: /tekton-argocd-example-build-mapping/
+            pathType: Prefix
             backend:
               service:
                 name: ingress-nginx-controller
