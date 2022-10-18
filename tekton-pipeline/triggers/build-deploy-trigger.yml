@@ -117,4 +117,4 @@ spec:
               service:
                 name: el-tekton-argocd-example-build-el
                 port:
-                  number: 8080
+                  number: 31455
