@@ -69,7 +69,7 @@ spec:
   params:
   - name: git-app-repo-url
     # Replace with path to the JSON resource you want, based on the Git provider that you're using (e.g. for AzureDevOps: resource.repository.remoteUrl)
-    value: $(body.https://github.com/AlbertoHernandezGomez/tekton-pipeline-example-app)
+    value: $(body.repository.url)
   - name: git-app-repo-revision
     value: master
 
